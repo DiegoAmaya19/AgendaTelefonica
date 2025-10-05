@@ -2,10 +2,10 @@ package com.agendatelefonica.agenda.Service.Implementa;
 
 import java.util.List;
 import org.springframework.stereotype.Service;
-
 import com.agendatelefonica.agenda.Mapper.ContactoMapper;
 import com.agendatelefonica.agenda.Model.DTO.ContactoRequest;
 import com.agendatelefonica.agenda.Model.DTO.ContactoResponse;
+import com.agendatelefonica.agenda.Model.Entity.Contacto;
 import com.agendatelefonica.agenda.Repository.ContactoRepository;
 import com.agendatelefonica.agenda.Service.ContactoService;
 
@@ -23,7 +23,7 @@ public class ContactoServiceImpl implements ContactoService {
         
         return contactoRepository.findAll()
                 .stream()
-                .map(contactoMapper::toEntity)
+                .map(contactoMapper::toEntityResponse)
                 .toList();
     }
 
@@ -35,8 +35,12 @@ public class ContactoServiceImpl implements ContactoService {
 
     @Override
     public ContactoResponse createContacto(ContactoRequest contacto) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createContacto'");
+
+            Contacto entity = contactoMapper.toEntity(contacto);
+            entity = contactoRepository.save(entity);
+          
+        return contactoMapper.toEntityResponse(entity);
+
     }
 
     @Override

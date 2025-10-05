@@ -2,8 +2,12 @@ package com.agendatelefonica.agenda.Controller;
 
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.agendatelefonica.agenda.Model.DTO.ContactoRequest;
 import com.agendatelefonica.agenda.Model.DTO.ContactoResponse;
 import com.agendatelefonica.agenda.Service.ContactoService;
 
@@ -20,6 +24,13 @@ public class ContactoController {
     public List<ContactoResponse> getAllContactos(){
 
         return contactoService.getAllContactos();
+    }
+
+    @PostMapping
+    public ContactoResponse createContacto(@RequestBody ContactoRequest contacto){
+
+        return contactoService.createContacto(contacto);
+
     }
     
 }

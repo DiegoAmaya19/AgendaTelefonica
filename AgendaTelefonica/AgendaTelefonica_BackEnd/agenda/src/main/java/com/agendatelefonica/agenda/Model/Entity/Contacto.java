@@ -30,7 +30,7 @@ public class Contacto {
     @Column(name = "primer_apellido", nullable = false, length = 50)
     private String primerApellido;
 
-    @Column(name = "segundo_apellido", length = 50, nullable = false)
+    @Column(name = "segundo_apellido", nullable = false, length = 50)
     private String segundoApellido;
 
     @Column(name = "grupo", length = 50)

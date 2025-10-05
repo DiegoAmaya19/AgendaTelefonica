@@ -6,7 +6,6 @@ import lombok.Data;
 @AllArgsConstructor
 @Data
 public class ContactoRequest {
-
     private String primerNombre;
     private String segundoNombre;
     private String primerApellido;
@@ -14,5 +13,6 @@ public class ContactoRequest {
     private String grupo;
     private String direccion;
     private String email;
+    private String indicativo;
     private String numero;
 }

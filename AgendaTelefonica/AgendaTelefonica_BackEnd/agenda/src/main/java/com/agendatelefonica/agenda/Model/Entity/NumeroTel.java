@@ -24,4 +24,11 @@ public class NumeroTel {
     @Column(name = "numero", nullable = false, length = 30)
     private String numero;
 
+    public NumeroTel(){};
+
+    public NumeroTel(String indicativo, String numero) {
+        this.indicativo = indicativo;
+        this.numero = numero;
+    }
+
 }
