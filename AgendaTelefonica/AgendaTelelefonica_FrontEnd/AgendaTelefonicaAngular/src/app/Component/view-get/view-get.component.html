@@ -1,0 +1,15 @@
+<a routerLink="viewPostRuta">Ir a Post</a>
+<button routerLink="viewPostRuta">Ir a Post</button>
+
+<p>Obtener informacion de los contactos</p>
+
+<table>
+    <tr *ngFor="let d of datos">
+        <td>Los datos del usuario son: {{d.nombre}}</td>
+        <td>{{d.apellido}}</td>
+        <td>{{d.grupo}}</td>
+        <td>{{d.email}}</td>
+        <td>{{d.direcion}}</td>
+        <td>{{d.numero}}</td>
+    </tr>
+</table>
