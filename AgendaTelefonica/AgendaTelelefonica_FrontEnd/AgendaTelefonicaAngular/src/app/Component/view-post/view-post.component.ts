@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, RouterOutlet} from '@angular/router';
 import { DatosService } from '../../Services/datos.service';
 import { ContactoRequest } from '../../Model/contacto-request';
-import { FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-view-post',
@@ -24,7 +24,7 @@ export class ViewPostComponent {
     email: '',
     indicativo: '',
     numero: '',
-    
+
   }
 
   letras: string = 'ddedede';

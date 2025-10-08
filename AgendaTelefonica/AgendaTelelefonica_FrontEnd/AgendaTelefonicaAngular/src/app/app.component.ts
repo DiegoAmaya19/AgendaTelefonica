@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ViewGetComponent } from './Component/view-get/view-get.component';
+import { MainComponent } from './Component/view-main/main/main.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ViewGetComponent],
+  imports: [RouterOutlet, MainComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'AgendaTelefonicaAngular';
+  
 }

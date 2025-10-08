@@ -5,15 +5,15 @@ GET http://localhost:8080/api/contactos/all
 POST http://localhost:8080/api/contactos
 Content-Type: application/json
 
-#   {
-#     "primerNombre": "Bruce",
-#     "segundoNombre": null,
-#     "primerApellido": "Wayne",
-#     "segundoApellido": "Clens",
-#     "grupo": "Negocios",
-#     "direccion": "Wayne Manor, Gotham, USA",
-#     "email": "bruce.wayne@test.com",
-#     "indicativo": "+1",
-#     "numero": "9177654321"
-#   }
+  {
+    "primerNombre": "Bruce",
+    "segundoNombre": null,
+    "primerApellido": "Wayne",
+    "segundoApellido": "Clens",
+    "grupo": "Negocios",
+    "direccion": "Wayne Manor, Gotham, USA",
+    "email": "bruce.wayne@test.com",
+    "indicativo": "+1",
+    "numero": "9177654321"
+  }
 

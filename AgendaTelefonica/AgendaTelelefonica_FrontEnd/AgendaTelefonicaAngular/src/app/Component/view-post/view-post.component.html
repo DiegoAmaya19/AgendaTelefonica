@@ -1,23 +1,23 @@
 <p>Insertar nuevo Contacto</p>
 
 <label>Ingrese primer nombre del Contacto</label>
-<input type="text" [(ngModel)]="contactoRequest.primerNombre">
+<input type="text" title="primerNombre" [(ngModel)]="contactoRequest.primerNombre">
 <label>Ingrese segundo nombre del Contacto</label>
-<input type="text" [(ngModel)]="contactoRequest.segundoNombre">
+<input type="text" title="segundoNombre" [(ngModel)]="contactoRequest.segundoNombre">
 <label>Ingrese primer apellido del Contacto</label>
-<input type="text" [(ngModel)]="contactoRequest.primerApellido">
+<input type="text" title="primerApellido" [(ngModel)]="contactoRequest.primerApellido">
 <label>Ingrese segundo apellido del Contacto</label>
-<input type="text" [(ngModel)]="contactoRequest.segundoApellido">
+<input type="text" title="segundoApellido" [(ngModel)]="contactoRequest.segundoApellido">
 <label>Ingrese grupo del Contacto</label>
-<input type="text" [(ngModel)]="contactoRequest.grupo">
+<input type="text" title="grupo" [(ngModel)]="contactoRequest.grupo">
 <label for="">Ingrese direccion</label>
-<input type="text" [(ngModel)]="contactoRequest.direccion">
+<input type="text" title="direccion" [(ngModel)]="contactoRequest.direccion">
 <label>Ingrese correo del Contacto</label>
-<input type="text" [(ngModel)]="contactoRequest.email">
+<input type="text" title="email" [(ngModel)]="contactoRequest.email">
 <label>Ingrese indicativo del Contacto</label> <!-- Mas adelante se debe agregar un desplegable con todos los indicativos posibles -->
-<input type="text" [(ngModel)]="contactoRequest.indicativo">
+<input type="text" title="indicativo" [(ngModel)]="contactoRequest.indicativo">
 <label>Ingrese numero del Contacto</label>
-<input type="text" [(ngModel)]="contactoRequest.numero">
+<input type="text" title="numero" [(ngModel)]="contactoRequest.numero">
 
 <button (click)="crearContacto()">Enviar</button>
 
