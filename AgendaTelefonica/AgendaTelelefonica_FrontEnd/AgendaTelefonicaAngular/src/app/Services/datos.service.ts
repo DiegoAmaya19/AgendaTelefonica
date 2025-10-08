@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ContactoRequest } from '../Model/contacto-request';
@@ -18,5 +18,11 @@ export class DatosService {
   obtenerContactos(): Observable<ContactoResponse[]> {
     //Aqui es donde angular se conecta al backend
     return this.http.get<ContactoResponse[]>(this.apiUrl);
+  }
+
+  //Metodo para el post/crear contacto
+  crearContacto(contacto: ContactoRequest): Observable<ContactoRequest>{
+    const httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.http.post<ContactoRequest>("http://localhost:8080/api/contactos",{contacto,httpHeaders});
   }
 }
