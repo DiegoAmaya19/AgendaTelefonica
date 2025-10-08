@@ -26,5 +26,3 @@ export class MainComponent {
     this.navName = "Ingreso de Contacto";
   }
 }
-  }
-}
