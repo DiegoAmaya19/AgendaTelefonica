@@ -27,8 +27,6 @@ export class ViewPostComponent {
 
   }
 
-  letras: string = 'ddedede';
-
   constructor(private datosService: DatosService){};
 
   crearContacto(){
@@ -41,16 +39,17 @@ export class ViewPostComponent {
     this.contactoRequest.indicativo = "+777";
     this.contactoRequest.numero = "774434347";
 
-    this.datosService.crearContacto(this.contactoRequest).subscribe({
-      next:(r) => {
-        console.log('Contactos creados con exito');
-      },
-      error: (er) => {
-        er.error('');
-      }
-    });
+    this.datosService.crearContacto(this.contactoRequest).subscribe();
 
-    console.log(this.contactoRequest.primerNombre);
+        // this.datosService.crearContacto(this.contactoRequest).subscribe({
+        //   next: (r) => {
+        //     console.log('Contactos creados con exito');
+        //   },
+        //   error: (er) => {
+        //     er.error('');
+        //   },
+        // });
+        
   }
 
 }

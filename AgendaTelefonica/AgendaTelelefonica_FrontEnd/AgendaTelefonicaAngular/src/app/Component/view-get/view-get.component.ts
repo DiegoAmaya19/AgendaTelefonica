@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DatosService } from '../../Services/datos.service';
 import { CommonModule } from '@angular/common';
 import { ContactoResponse } from '../../Model/contacto-response';
-import { RouterModule} from '@angular/router';
+import { RouterModule, Router} from '@angular/router';
 
 @Component({
   selector: 'app-view-get',
@@ -15,20 +15,25 @@ export class ViewGetComponent implements OnInit {
   datos: ContactoResponse[] = [];
 
   constructor(
-    private datosService: DatosService,
+    private datosService: DatosService, private router: Router
   ) {}
 
   ngOnInit(): void {
+
     this.cargarDatos();
+
   }
 
   cargarDatos(): void {
+
     this.datosService.obtenerContactos().subscribe({
       next: (resp) => {
+
         this.datos = resp;
       },
       error: (error) => {
         console.error('Error al obtener los datos', error);
+
       },
     });
   }

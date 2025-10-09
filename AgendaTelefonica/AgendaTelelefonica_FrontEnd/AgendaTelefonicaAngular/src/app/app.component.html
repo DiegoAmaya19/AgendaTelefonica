@@ -6,13 +6,14 @@
     <button type="button" (click)="changeNameToHome()" routerLink="/">
       Home
     </button>
-    <button type="button" (click)="changeNameIngresarContacto()">
+    <button type="button" (click)="changeNameIngresarContacto()" routerLink="viewPostRuta">
       Ingresar Contacto
     </button>
     <button
       type="button"
       (click)="changeNameRevisarContacto()"
       routerLink="/viewGetRuta"
+      routerLinkActive="active"
     >
       Revisar contacto
     </button>

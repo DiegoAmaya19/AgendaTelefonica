@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { ViewGetComponent } from './Component/view-get/view-get.component';
 import { ViewPostComponent } from './Component/view-post/view-post.component';
 import { MainComponent } from './Component/view-main/main/main.component';
