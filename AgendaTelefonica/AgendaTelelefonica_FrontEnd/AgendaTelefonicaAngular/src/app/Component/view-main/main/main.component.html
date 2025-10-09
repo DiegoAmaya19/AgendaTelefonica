@@ -1,23 +1,9 @@
 <div class="body">
-  <nav class="nav-main">
-    <div class="name-home">
-      <h2>{{ navName }}</h2>
-    </div>
-    <div class="nav-main-div">
-      <button type="button" (click)="changeNameToHome()">Home</button>
-      <button type="button" (click)="changeNameIngresarContacto()">Ingresar Contacto</button>
-      <button type="button" >Revisar contacto</button>
-      <button type="button">Actualizar contacto</button>
-      <button type="button">Buscar Contacto</button>
-      <button type="button">Eliminar Contacto</button>
-    </div>
-  </nav>
-
   <div class="div-body">
     <div class="div-main-dasboard">
 
       <div class="box-one">
-        <button type="button" class="box-read">Leer Datos</button>
+        <button type="button" class="box-read" routerLink="viewGetRuta">Leer Datos</button>
         <button type="button" class="box-update">Actualizar Contacto</button>
       </div>
 

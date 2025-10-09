@@ -3,7 +3,7 @@ import { DatosService } from '../../Services/datos.service';
 import { CommonModule } from '@angular/common';
 import { NgFor } from '@angular/common';
 import { ContactoResponse } from '../../Model/contacto-response';
-import { RouterModule, RouterOutlet} from '@angular/router';
+import { RouterModule} from '@angular/router';
 
 @Component({
   selector: 'app-view-get',
