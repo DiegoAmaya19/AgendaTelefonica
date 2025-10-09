@@ -1,15 +1,30 @@
-<router-outlet>
-  <nav class="nav-main">
-    <div class="name-home">
-      <h2>{{navName}}</h2>
-    </div>
-    <div class="nav-main-div">
-      <button type="button" (click)="changeNameToHome()" routerLink="main">Home</button>
-      <button type="button" (click)="changeNameIngresarContacto()">Ingresar Contacto</button>
-      <button type="button" (click)="changeNameRevisarContacto()" routerLink="viewGetRuta">Revisar contacto</button>
-      <button type="button" (click)="changeNameActualizarContacto()">Actualizar contacto</button>
-      <button type="button" (click)="changeNameBuscarContacto()">Buscar Contacto</button>
-      <button type="button" (click)="changeNameEliminarContacto()">Eliminar Contacto</button>
-    </div>
-  </nav>
-</router-outlet>
+<nav class="nav-main">
+  <div class="name-home">
+    <h2>{{ navName }}</h2>
+  </div>
+  <div class="nav-main-div">
+    <button type="button" (click)="changeNameToHome()" routerLink="/">
+      Home
+    </button>
+    <button type="button" (click)="changeNameIngresarContacto()">
+      Ingresar Contacto
+    </button>
+    <button
+      type="button"
+      (click)="changeNameRevisarContacto()"
+      routerLink="/viewGetRuta"
+    >
+      Revisar contacto
+    </button>
+    <button type="button" (click)="changeNameActualizarContacto()">
+      Actualizar contacto
+    </button>
+    <button type="button" (click)="changeNameBuscarContacto()">
+      Buscar Contacto
+    </button>
+    <button type="button" (click)="changeNameEliminarContacto()">
+      Eliminar Contacto
+    </button>
+  </div>
+</nav>
+<router-outlet></router-outlet>

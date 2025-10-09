@@ -1,12 +1,16 @@
-<p>Obtener informacion de los contactos</p>
+<div class="body">
+  <p>Obtener informacion de los contactos</p>
 
-<table>
+  <button type="button" (click)="cargarDatos()">Cargar Datos</button>
+
+  <table>
     <tr *ngFor="let d of datos">
-        <td>Los datos del usuario son: {{d.nombre}}</td>
-        <td>{{d.apellido}}</td>
-        <td>{{d.grupo}}</td>
-        <td>{{d.email}}</td>
-        <td>{{d.direcion}}</td>
-        <td>{{d.numero}}</td>
+      <td>Los datos del usuario son: {{ d.nombre }}</td>
+      <td>{{ d.apellido }}</td>
+      <td>{{ d.grupo }}</td>
+      <td>{{ d.email }}</td>
+      <td>{{ d.direcion }}</td>
+      <td>{{ d.numero }}</td>
     </tr>
-</table>
+  </table>
+</div>
