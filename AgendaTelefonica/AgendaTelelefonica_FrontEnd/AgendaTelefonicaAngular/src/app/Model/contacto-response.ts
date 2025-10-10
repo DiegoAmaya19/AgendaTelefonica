@@ -2,7 +2,7 @@ export interface ContactoResponse {
     nombre: string;
     apellido: string;
     grupo: string;
-    direcion: string;
+    direccion: string;
     email: string;
     numero: string;
 }

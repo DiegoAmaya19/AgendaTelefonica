@@ -1,8 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ContactoRequest } from '../Model/contacto-request';
 import { ContactoResponse } from '../Model/contacto-response';
+import { ContactoRequest } from '../Model/contacto-request';
 
 @Injectable({
   providedIn: 'root' //Lo hace disponible globalmente singleton
@@ -21,8 +21,8 @@ export class DatosService {
   }
 
   //Metodo para el post/crear contacto
-  crearContacto(contacto: ContactoRequest): Observable<ContactoRequest>{
+  crearContacto(contacto: ContactoRequest): Observable<ContactoResponse>{
     const httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post<ContactoRequest>("http://localhost:8080/api/contactos",{contacto,httpHeaders});
+    return this.http.post<ContactoResponse>("http://localhost:8080/api/contactos/create",contacto,{headers : httpHeaders});
   }
 }

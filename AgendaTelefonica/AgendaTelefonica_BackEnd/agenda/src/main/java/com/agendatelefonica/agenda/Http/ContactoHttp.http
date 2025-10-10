@@ -2,7 +2,7 @@
 GET http://localhost:8080/api/contactos/all
 
 ###
-POST http://localhost:8080/api/contactos
+POST http://localhost:8080/api/contactos/create
 Content-Type: application/json
 
   {

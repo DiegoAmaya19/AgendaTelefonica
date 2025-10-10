@@ -1,11 +1,11 @@
 export interface ContactoRequest {
-    primerNombre: string;
-    segundoNombre: string;
-    primerApellido: string;
-    segundoApellido: string;
-    grupo: string;
-    direccion: string;
-    email: string;
-    indicativo: string;
-    numero: string;
+    primerNombre: String;
+    segundoNombre: String;
+    primerApellido: String;
+    segundoApellido: String;
+    grupo: String;
+    direccion: String;
+    email: String;
+    indicativo: String;
+    numero: String;
 }

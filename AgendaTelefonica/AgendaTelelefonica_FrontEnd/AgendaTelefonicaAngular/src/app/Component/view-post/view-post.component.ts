@@ -4,6 +4,7 @@ import { RouterModule, RouterOutlet} from '@angular/router';
 import { DatosService } from '../../Services/datos.service';
 import { ContactoRequest } from '../../Model/contacto-request';
 import { FormsModule } from '@angular/forms';
+import { ContactoResponse } from '../../Model/contacto-response';
 
 @Component({
   selector: 'app-view-post',
@@ -13,6 +14,15 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './view-post.component.css'
 })
 export class ViewPostComponent {
+
+  response: ContactoResponse = {
+    nombre: '',
+    apellido: '',
+    grupo: '',
+    direccion: '',
+    email: '',
+    numero: ''
+  };
 
   contactoRequest: ContactoRequest = {
     primerNombre: '',
@@ -31,15 +41,26 @@ export class ViewPostComponent {
 
   crearContacto(){
 
-    this.contactoRequest.primerNombre = "Goku";
-    this.contactoRequest.primerApellido = "Sayan";
-    this.contactoRequest.grupo = "Familia";
-    this.contactoRequest.direccion = "Planeta Vegeta";
-    this.contactoRequest.email = "goku@gmail.com";
-    this.contactoRequest.indicativo = "+777";
-    this.contactoRequest.numero = "774434347";
+    // this.contactoRequest.primerNombre = "Gabriel";
+    // this.contactoRequest.segundoNombre = "Alfonso";
+    // this.contactoRequest.primerApellido = "Armando";
+    // this.contactoRequest.segundoApellido = "Torres";
+    // this.contactoRequest.grupo = "Familia";
+    // this.contactoRequest.direccion = "Calle 33 # 22";
+    // this.contactoRequest.email = "alfonso@gmail.com";
+    // this.contactoRequest.indicativo = "+57";
+    // this.contactoRequest.numero = "345355555";
 
-    this.datosService.crearContacto(this.contactoRequest).subscribe();
+    this.datosService.crearContacto(this.contactoRequest).subscribe((r) =>{
+
+      this.response.nombre = r.nombre;
+      this.response.apellido = r.apellido;
+      this.response.grupo = r.grupo;
+      this.response.direccion = r.direccion;
+      this.response.email = r.email;
+      this.response.numero = r.numero;
+
+    })
 
         // this.datosService.crearContacto(this.contactoRequest).subscribe({
         //   next: (r) => {

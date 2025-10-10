@@ -28,7 +28,7 @@ public class ContactoController {
         return contactoService.getAllContactos();
     }
 
-    @PostMapping
+    @PostMapping("create")
     public ContactoResponse createContacto(@RequestBody ContactoRequest contacto){
 
         return contactoService.createContacto(contacto);
