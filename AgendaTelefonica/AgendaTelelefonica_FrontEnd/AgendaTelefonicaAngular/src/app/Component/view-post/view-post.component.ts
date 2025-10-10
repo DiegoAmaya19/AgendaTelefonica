@@ -41,16 +41,6 @@ export class ViewPostComponent {
 
   crearContacto(){
 
-    // this.contactoRequest.primerNombre = "Gabriel";
-    // this.contactoRequest.segundoNombre = "Alfonso";
-    // this.contactoRequest.primerApellido = "Armando";
-    // this.contactoRequest.segundoApellido = "Torres";
-    // this.contactoRequest.grupo = "Familia";
-    // this.contactoRequest.direccion = "Calle 33 # 22";
-    // this.contactoRequest.email = "alfonso@gmail.com";
-    // this.contactoRequest.indicativo = "+57";
-    // this.contactoRequest.numero = "345355555";
-
     this.datosService.crearContacto(this.contactoRequest).subscribe((r) =>{
 
       this.response.nombre = r.nombre;
@@ -70,7 +60,7 @@ export class ViewPostComponent {
         //     er.error('');
         //   },
         // });
-        
+
   }
 
 }
