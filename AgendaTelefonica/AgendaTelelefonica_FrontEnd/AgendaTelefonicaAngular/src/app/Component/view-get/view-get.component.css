@@ -4,3 +4,54 @@
   width: 100vw;
   display: flex;
 }
+
+.main-left {
+  height: 100%;
+  width: 60%;
+  float: left;
+}
+
+.div-title-main-left {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.title-main-left {
+  height: 80%;
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.body-main-left {
+  height: 90%;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.table-date {
+  height: 100%;
+  width: 100%;
+}
+
+.row {
+  height: 40px;
+  width: 100%;
+  background-color: #394452;
+  color: bisque;
+}
+
+
+.main-right {
+  height: 100%;
+  width: 40%;
+}

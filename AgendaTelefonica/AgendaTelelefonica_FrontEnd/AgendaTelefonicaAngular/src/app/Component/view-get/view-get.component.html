@@ -1,18 +1,22 @@
 <div class="body">
-
-  <div class=""></div>
-  <p>Obtener informacion de los contactos</p>
-
-  <button type="button" (click)="cargarDatos()">Cargar Datos</button>
-
-  <table>
-    <tr *ngFor="let d of datos">
-      <td>Los datos del usuario son: {{ d.nombre }}</td>
-      <td>{{ d.apellido }}</td>
-      <td>{{ d.grupo }}</td>
-      <td>{{ d.email }}</td>
-      <td>{{ d.direccion }}</td>
-      <td>{{ d.numero }}</td>
-    </tr>
-  </table>
+  <div class="main-left">
+    <div class="div-title-main-left">
+      <p class="title-main-left">Obtener informacion de los contactos</p>
+    </div>
+    <div class="body-main-left">
+      <table class="table-date">
+        <tr *ngFor="let d of datos" class="row">
+          <td>{{ d.nombre }}</td>
+          <td>{{ d.apellido }}</td>
+          <td>{{ d.grupo }}</td>
+          <td>{{ d.email }}</td>
+          <td>{{ d.direccion }}</td>
+          <td>{{ d.numero }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="main-right">
+    <h4>Contenido derecho</h4>
+  </div>
 </div>
