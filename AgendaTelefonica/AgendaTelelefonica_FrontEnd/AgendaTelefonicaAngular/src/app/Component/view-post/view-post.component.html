@@ -1,29 +1,142 @@
-<p>Insertar nuevo Contacto</p>
+<div class="body">
+  <div class="left-main">
+    <div class="div-title">
+      <p class="title-form">Datos contacto</p>
+    </div>
+    <form (ngSubmit)="onSubmit()" class="form-contacto">
+      <!-- Comienzo de inputs -->
 
-<label>Ingrese primer nombre del Contacto</label>
-<input type="text" title="primerNombre" [(ngModel)]="contactoRequest.primerNombre">
-<label>Ingrese segundo nombre del Contacto</label>
-<input type="text" title="segundoNombre" [(ngModel)]="contactoRequest.segundoNombre">
-<label>Ingrese primer apellido del Contacto</label>
-<input type="text" title="primerApellido" [(ngModel)]="contactoRequest.primerApellido">
-<label>Ingrese segundo apellido del Contacto</label>
-<input type="text" title="segundoApellido" [(ngModel)]="contactoRequest.segundoApellido">
-<label>Ingrese grupo del Contacto</label>
-<input type="text" title="grupo" [(ngModel)]="contactoRequest.grupo">
-<label for="">Ingrese direccion</label>
-<input type="text" title="direccion" [(ngModel)]="contactoRequest.direccion">
-<label>Ingrese correo del Contacto</label>
-<input type="text" title="email" [(ngModel)]="contactoRequest.email">
-<label>Ingrese indicativo del Contacto</label> <!-- Mas adelante se debe agregar un desplegable con todos los indicativos posibles -->
-<input type="text" title="indicativo" [(ngModel)]="contactoRequest.indicativo">
-<label>Ingrese numero del Contacto</label>
-<input type="text" title="numero" [(ngModel)]="contactoRequest.numero">
+      <div class="div-left">
+        <div class="div-input-contacto">
+          <input
+            placeholder="Primer Nombre"
+            class="input-contacto"
+            type="text"
+            title="primerNombre"
+            required
+            name="primerNombre"
+            [(ngModel)]="contactoRequest.primerNombre"
+          />
+        </div>
+        <div class="div-input-contacto">
+          <input
+            placeholder="Segundo Nombre"
+            class="input-contacto"
+            type="text"
+            title="segundoNombre"
+            name="segundoNombre"
+            [(ngModel)]="contactoRequest.segundoNombre"
+          />
+        </div>
+        <div class="div-input-contacto">
+          <input
+            placeholder="Primer Apellido"
+            class="input-contacto"
+            type="text"
+            title="primerApellido"
+            required
+            name="primerApellido"
+            [(ngModel)]="contactoRequest.primerApellido"
+          />
+        </div>
+        <div class="div-input-contacto">
+          <input
+            placeholder="Segundo Apellido"
+            class="input-contacto"
+            type="text"
+            title="segundoApellido"
+            required="true"
+            name="segundoApellido"
+            [(ngModel)]="contactoRequest.segundoApellido"
+          />
+        </div>
+        <div class="div-input-contacto">
+          <input
+            placeholder="Grupo"
+            class="input-contacto"
+            type="text"
+            title="grupo"
+            required
+            name="gurpo"
+            [(ngModel)]="contactoRequest.grupo"
+          />
+        </div>
+      </div>
+      <div class="div-right">
+        <div class="div-input-contacto">
+          <input
+            placeholder="Direccion"
+            class="input-contacto"
+            type="text"
+            title="Direccion"
+            required
+            name="direccion"
+            [(ngModel)]="contactoRequest.direccion"
+          />
+        </div>
+        <div class="div-input-contacto">
+          <input
+            placeholder="Correo"
+            class="input-contacto"
+            type="text"
+            title="email"
+            required
+            name="email"
+            [(ngModel)]="contactoRequest.email"
+          />
+        </div>
+        <div class="div-input-contacto">
+          <input
+            placeholder="Indicativo"
+            class="input-contacto"
+            type="text"
+            title="Indicativo"
+            required
+            name="indicativo"
+            [(ngModel)]="contactoRequest.indicativo"
+          />
+        </div>
+        <div class="div-input-contacto">
+          <input
+            placeholder="Número"
+            class="input-contacto"
+            type="text"
+            title="Numero"
+            required
+            name="numero"
+            [(ngModel)]="contactoRequest.numero"
+          />
+        </div>
+        <div class="div-input-button">
+          <button type="button" class="button-enviar" (click)="onSubmit()">Enviar</button>
+        </div>
+      </div>
+    </form>
+  </div>
 
-<button type="button" (click)="crearContacto()">Enviar</button>
-
-<label>{{response.nombre}}</label>
-<label>{{response.apellido}}</label>
-<label>{{response.grupo}}</label>
-<label>{{response.email}}</label>
-<label>{{response.direccion}}</label>
-<label>{{response.numero}}</label>
+  <div class="right-main">
+    <div class="div-title">
+      <p class="title-form">Información</p>
+    </div>
+    <div class="div-infomacion-cliente">
+      <div class="div-info-cliente">
+        <h4 class="label-info-cliente">{{response.nombre}}</h4>
+      </div>
+      <div class="div-info-cliente">
+        <h4 class="label-info-cliente">{{response.apellido}}</h4>
+      </div>
+      <div class="div-info-cliente">
+        <h4 class="label-info-cliente">{{response.grupo}}</h4>
+      </div>
+      <div class="div-info-cliente">
+        <h4 class="label-info-cliente">{{response.direccion}}</h4>
+      </div>
+      <div class="div-info-cliente">
+        <h4 class="label-info-cliente">{{response.email}}</h4>
+      </div>
+      <div class="div-info-cliente">
+        <h4 class="label-info-cliente">{{response.numero}}</h4>
+      </div>
+    </div>
+  </div>
+</div>

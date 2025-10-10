@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, RouterOutlet} from '@angular/router';
+import { RouterModule} from '@angular/router';
 import { DatosService } from '../../Services/datos.service';
 import { ContactoRequest } from '../../Model/contacto-request';
 import { FormsModule } from '@angular/forms';
@@ -39,7 +39,7 @@ export class ViewPostComponent {
 
   constructor(private datosService: DatosService){};
 
-  crearContacto(){
+  onSubmit(){
 
     this.datosService.crearContacto(this.contactoRequest).subscribe((r) =>{
 
