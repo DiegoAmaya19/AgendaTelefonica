@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.agendatelefonica.agenda.Model.DTO.ContactoRequest;
 import com.agendatelefonica.agenda.Model.DTO.ContactoResponse;
 import com.agendatelefonica.agenda.Service.ContactoService;
-
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
@@ -33,6 +33,11 @@ public class ContactoController {
 
         return contactoService.createContacto(contacto);
 
+    }
+
+    @GetMapping("/search/{id}")
+    public List<ContactoResponse> updateContacto(@PathVariable Integer id){
+        return contactoService.getContactoById(id);
     }
     
 }

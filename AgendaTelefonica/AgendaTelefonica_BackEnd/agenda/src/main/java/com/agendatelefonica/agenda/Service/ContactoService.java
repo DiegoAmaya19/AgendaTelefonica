@@ -9,7 +9,11 @@ public interface ContactoService {
     
     List<ContactoResponse> getAllContactos();
 
-    ContactoResponse getContactoById(Integer id);
+    List<ContactoResponse> getContactoById(Integer id);
+
+    List<ContactoResponse> getContactoByName(String name);
+
+    
 
     ContactoResponse createContacto(ContactoRequest contacto);
 

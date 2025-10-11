@@ -2,6 +2,9 @@
 GET http://localhost:8080/api/contactos/all
 
 ###
+GET http://localhost:8080/api/contactos/search/12
+
+###
 POST http://localhost:8080/api/contactos/create
 Content-Type: application/json
 

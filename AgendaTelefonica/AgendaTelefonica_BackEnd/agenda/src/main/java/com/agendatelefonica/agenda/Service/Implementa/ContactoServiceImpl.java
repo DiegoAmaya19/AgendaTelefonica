@@ -20,7 +20,7 @@ public class ContactoServiceImpl implements ContactoService {
 
     @Override
     public List<ContactoResponse> getAllContactos() {
-        
+
         return contactoRepository.findAll()
                 .stream()
                 .map(contactoMapper::toEntityResponse)
@@ -28,25 +28,33 @@ public class ContactoServiceImpl implements ContactoService {
     }
 
     @Override
-    public ContactoResponse getContactoById(Integer id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getContactoById'");
+    public List<ContactoResponse> getContactoById(Integer id) {
+        return contactoRepository.findAllById(id)
+                .stream()
+                .map(contactoMapper::toEntityResponse)
+                .toList();
+
     }
 
     @Override
     public ContactoResponse createContacto(ContactoRequest contacto) {
 
-            Contacto entity = contactoMapper.toEntity(contacto);
-            entity = contactoRepository.save(entity);
-          
+        Contacto entity = contactoMapper.toEntity(contacto);
+        entity = contactoRepository.save(entity);
+
         return contactoMapper.toEntityResponse(entity);
 
     }
 
     @Override
     public ContactoResponse updateContacto(Integer id, ContactoRequest contacto) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'updateContacto'");
+        return null;
     }
-    
+
+    @Override
+    public List<ContactoResponse> getContactoByName(String name) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getContactoByName'");
+    }
+
 }
