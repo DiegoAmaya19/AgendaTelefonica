@@ -27,7 +27,7 @@ export class ViewGetComponent implements OnInit {
   cargarDatos(): void {
 
     this.datosService.obtenerContactos().subscribe({
-      next: (resp) => {
+      next: (resp) => { 
 
         this.datos = resp;
       },
